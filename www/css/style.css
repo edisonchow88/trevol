@@ -343,7 +343,7 @@ input[type=email], input[type=password] {
 }
 
 .page--full_bg__background {
-    /*background: url("../img/giphy.gif");*/
+    background: url("../img/giphy.gif");
     background-color: black;
 }
 
@@ -536,7 +536,7 @@ input[type=email], input[type=password] {
 }
 
 .spinner{
- width:;
+
  display: block;
  position: absolute;
  top: 50%;
@@ -546,9 +546,9 @@ input[type=email], input[type=password] {
  -moz-transform: translate(-50%, -50%); /* Firefox */
  -ms-transform: translate(-50%, -50%); /* IE 9 */
  -o-transform: translate(-50%, -50%); /* Opera */
- -ms-transform: scale(2,2); /* IE 9 */
-    -webkit-transform: scale(2,2); /* Safari */
-    transform: scale(2,2);
+ -ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Safari */
+    transform: scale(1,1);
 }
 
 .ons-carousel-item {
@@ -609,7 +609,7 @@ input[type=email], input[type=password] {
 				bottom: 48px;
 				left: 0;
 				width: 100%;
-				background: #aaa;
+				/*background: #aaa;*/
 				overflow: auto;
                 heigh:100%;
 			}
@@ -653,10 +653,12 @@ input[type=email], input[type=password] {
                     vertical-align:top;
                     margin:6px 0px 0px 6px;
                     text-decoration:none;
-                    color:black;"
+                    color:black;
+                    line-height: 16px
                     }
                     .list_img{
                     height:66px;width:66px;
+                    border-radius: 5px;
                     }
                     
                     .list_scr{
@@ -666,15 +668,18 @@ input[type=email], input[type=password] {
                     .list_a{
                     text-decoration:none;
                     }
-                    
+                
+
 
 .w_box{
     width:66px;
     height:66px;
     display:inline-block;
     vertical-align: top;
-    background-color: #CCCCCC; 
+    color:black;
+    /*background-color: #CCCCCC;*/ 
     float:right;
+    text-align: center;
 }
 
 .act_iten_container{
@@ -702,4 +707,11 @@ input[type=email], input[type=password] {
     color: rgba(38,100,171,0.81);
     margin:12px 7px;
 }
-        
+
+.day_list{
+    padding:6px 0px 6px 6px;
+    height:10px
+    background-color:#DDD;
+    vertical-align: center;
+    font-weight: bold;
+}

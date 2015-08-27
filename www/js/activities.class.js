@@ -86,7 +86,10 @@ function queryactivity(input){
                 $('.act_d_city').html(results.get("City"));
                 $('.act_d_time').html(results.get("Time"))
                 $('.act_d_desc').html(results.get("Description"))
-                $('.act_d_fee').html(results.get("Fee"))
+                $('.act_d_fee').html('&#165'+results.get("Fee"))
+                
+                current_act_name=results.get("Activity");
+                current_act_img=results.get("IMG_ID");
                 
                 },
                 error: function(object, error) {console.log("Get Failed");} 

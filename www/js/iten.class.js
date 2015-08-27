@@ -31,3 +31,59 @@ function iten_slider(){
   };
   
   
+function add_trip_iten(){
+    
+    s="";
+    s+='<li style="padding-top:6px">';
+    s+='<a class="list_a" href="#" onclick="populateact(\''+current_act+'\')"><div><label>';
+    s+='<img class="list_img" src="'+current_act_img+'" alt=""></img>';
+    s+='<span class="list_span">'+current_act_name+'</span>';
+    s+='<div class="w_box"></div></label></div></a></li>';
+
+    $('#itemsList li:nth-child('+dayposition[current_day]+')').after(s);
+    
+    var pages = tripNavigator.getPages();
+    pages[pages.length - 2].destroy();
+    tripNavigator.popPage();
+}
+
+function load_iten(){
+console.log("Load iten");    
+if(current_iten_a.length==1){console.log("Skipped")}else{    
+
+
+var dayholder=1;
+            var s="";
+            dayposition[0]=0;
+            dayposition[1]=1;
+            s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:#DDD;vertical-align: center;">Day'+dayholder+'</li>';
+            for(var i=0; i<current_iten_a.length; i++) {
+                var act_name=current_iten_a[i][1];
+                var act_img=current_iten_a[i][2];
+                var act_city=current_iten_a[i][3];
+                var act_fee=current_iten_a[i][4];
+                var act_cur=current_iten_a[i][6];
+                
+
+                s+='<li style="padding-top:6px">';
+                s+='<a class="list_a" href="#" onclick="populateact(\''+current_iten_a[i][0]+'\')"><div><label>';
+                s+='<img class="list_img" src="'+act_img+'" alt=""></img>';
+                s+='<span class="list_span">'+act_name+'</span>';
+                s+='<div class="w_box">'+act_cur+'&nbsp'+act_fee+'</div></label></div></a></li>';
+
+                if(!current_iten_a[i+1]){}else{
+                if(current_iten_a[i][5]<current_iten_a[i+1][5]){
+                        dayholder+=1;
+                        s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:#DDD;vertical-align: center;">Day'+dayholder+'</li>';
+                        dayposition[dayholder]=i+dayholder;
+                        console.log("Dayholder: "+dayholder+" Dayposition:"+dayposition[dayholder]);
+                }}
+                
+          }
+        
+          
+          $("#itemsList").html(s);
+          iScroll();
+          }
+          }
+  

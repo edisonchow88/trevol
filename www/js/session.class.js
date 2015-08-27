@@ -17,4 +17,13 @@ var days_array=[];
 
 var login_country="";
 var contact_list=[];
-var curret_act="";
+var current_act="";
+var current_act_name="";
+var current_act_img="";
+var current_day=0;
+
+var dayposition=[];
+
+
+
+var current_iten_a=[[]]; 

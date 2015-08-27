@@ -52,7 +52,7 @@ function trip_navi(id){
         if(id==3){
             tripNavigator.pushPage('3_trip_4_iten.html',{ animation:'none' });
             delay_hlight(3);
-            setTimeout(function(){create_days_carousel();iten_slider();}, 250);
+            setTimeout(function(){create_days_carousel();iten_slider();load_iten();}, 250);
             
         }
         if(id==4){
@@ -350,6 +350,7 @@ function create_days(start,end){
     Parse.Object.saveAll(dayArray, {
         success: function(objs) {},error: function(error) {}
     });
+    dayArray=[];  
 }
 
 function delete_days(){
@@ -389,7 +390,7 @@ function create_days_carousel(){
         var date=eval('time_to(days_array[i],"date")');
         var dayname=eval('time_to(days_array[i],"day")');
         var day="Day "+i;
-        s+='<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>';
+        s+='<a class="iten_link" href="#" onclick="current_day_selected('+i+')"><div class="iten_day" style="border-radius:5px;"><p>';
         s+=day;
         s+='</p><p class="iten_day_s">';
         s+=date;
@@ -401,7 +402,10 @@ function create_days_carousel(){
     $(".date-slider").html(s);
 }
 
-
+function current_day_selected(input){
+    current_day=input;
+    console.log("Current day= "+input);
+}
 
 
 

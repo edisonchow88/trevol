@@ -54,6 +54,7 @@ $('.tab-bar__content').css("height","100%");
 
 
 function iScroll(){
+    console.log("iscroll called")
     $("#itemsList").sortable({ 
   handle : "label", 
   axis : 'y', 
