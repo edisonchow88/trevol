@@ -1,0 +1,51 @@
+<ons-page>
+
+<ons-toolbar fixed-style>
+    <div class="left" onclick="unhidetabs()"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Trip Settings</div>
+    <div class="right" onclick="editTripInfo()"><ons-toolbar-button>Save</ons-toolbar-button></div>
+</ons-toolbar>
+
+<div class="trip_tab_containter" style="z-index:9000;">
+    <div class="trip_tab_item"><button onclick="trip_navi(1)" class="trip-menu trip-menu-1 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="comment"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(2)" class="trip-menu trip-menu-2 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="user"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(3)" class="trip-menu trip-menu-3 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="calendar"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(4)" class="trip-menu trip-menu-4 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="fa-credit-card"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(5)" class="trip-menu trip-menu-5 trip-icon button button--quiet"><ons-icon class="trip_tab_item_icon" icon="list"></ons-icon></button></div>
+</div>    
+</br>
+</br>
+</br>
+ <ons-list modifier="inset" style="margin-top: 10px; top: 44px;">
+        <ons-list-item>
+        <a href="#" onclick="getPhoto();"><img class="edit_trip_img" src=""></img></a>
+         
+        <span class="new_trip_img_desc">
+        <textarea id="edit_trip_desc" class="textarea textarea--transparent" placeholder="Add a description and picture to your trip " style="width: 100%; height: 100px;">Touch here to edit my trip description and add image</textarea>
+        </span>
+            
+        </ons-list-item>
+        <ons-list-item>
+          <input type="text" id="edit_trip_name" class="text-input text-input--transparent" placeholder="Trip Name" value="" style="width: 100%">
+        </ons-list-item>
+        
+        <ons-list-item>
+          <div class="a_span_l">Start</div><input type="date" id="edit_trip_start_date" class="text-input text-input--transparent a_span_r" placeholder="Trip Start Date" value="">
+        </ons-list-item>
+
+        <ons-list-item>
+          <div class="a_span_l">End</div><input type="date" id="edit_trip_end_date" class="text-input text-input--transparent a_span_r" placeholder="Trip End Date" value="">
+        </ons-list-item>
+        
+        <ons-list-item>
+          <div class="a_span_l">Country</div><input type="text" id="edit_trip_country" class="text-input text-input--transparent a_span_r" placeholder="Trip Country" value="">
+        </ons-list-item>
+</ons-list>
+      <div style="padding: 10px 9px">
+        <ons-button class="red" id="delete_trip" onclick="delete_trip()" modifier="large">
+          Delete 
+        </ons-button>
+      </div>
+
+    
+</ons-page>

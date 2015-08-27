@@ -1,0 +1,84 @@
+<ons-page>
+
+<ons-toolbar fixed-style>
+    <div class="left" onclick="unhidetabs()"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Itinerary</div>
+    <div class="right"  style="background-color:white;border-bottom:1px solid #EEEEEE">
+            <ons-toolbar-button>
+              <ons-icon icon="list" onclick="tripNavigator.pushPage('3_trip_4_iten_0_tpl.html')" fixed-width="false" style="vertical-align: -4px;"></ons-icon>
+            </ons-toolbar-button>
+            <ons-toolbar-button>
+              <ons-icon icon="plus" onclick="tripNavigator.pushPage('3_trip_4_iten_1_add.html')" fixed-width="false" style="vertical-align: -4px;"></ons-icon>
+            </ons-toolbar-button>
+    </div>
+</ons-toolbar>
+
+<div class="trip_tab_containter" style="z-index:9000;">
+    <div class="trip_tab_item"><button onclick="trip_navi(1)" class="trip-menu trip-menu-1 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="comment"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(2)" class="trip-menu trip-menu-2 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="user"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(3)" class="trip-menu trip-menu-3 trip-icon button button--quiet"><ons-icon class="trip_tab_item_icon" icon="calendar"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(4)" class="trip-menu trip-menu-4 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="fa-credit-card"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(5)" class="trip-menu trip-menu-5 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="list"></ons-icon></button></div>
+</div>      
+
+<div class="iten-content" style="z-index:8000;top:78px;position:fixed;padding-bottom: 10px;overflow: hidden;width:100%;background-color:white;height:53px;">
+    
+<div class="date-slider">
+
+  <a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+<a class="iten_link" href="#"><div class="iten_day" style="border-radius:5px;"><p>Day 1</p><p class="iten_day_s">Sept 1</p><p>Monday</p></div></a>
+
+    </div>
+</div>
+
+
+<ons-page>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+  <ons-list class="plan-list">
+          <ons-list-item modifier="chevron" class="plan" ng-repeat="a in [1,2,3,4,5,6,7,8,9,10]">
+            <ons-row>
+              <ons-col width="80px" class="plan-left">
+                <div class="plan-date">5:30 PM</div>
+                <div class="plan-duration">1h</div>
+              </ons-col>
+
+              <ons-col width="6px" class="plan-center" ng-style="{backgroundColor:a % 3 == 1 ? '#3399ff' : '#ccc'}">
+              </ons-col>
+
+              <ons-col class="plan-right">
+                <div class="plan-name">Onsen UI Meetup</div>
+
+                <div class="plan-info">
+                  <div ng-hide="a % 4 == 0">
+                    <ons-icon icon="fa-phone"></ons-icon>123-456-789
+                  </div>
+
+                  <div ng-hide="a % 3 == 0">
+                    <ons-icon icon="fa-map-marker"></ons-icon>Moscone, San Francisco
+                  </div>
+                </div>
+              </ons-col>
+            </ons-row>
+          </ons-list-item>
+
+        </ons-list>
+ 
+</ons-page>    
+
+</ons-page>

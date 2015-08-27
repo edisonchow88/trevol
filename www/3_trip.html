@@ -1,0 +1,59 @@
+<ons-navigator var="tripNavigator">
+
+
+<ons-toolbar fixed-style>
+    <!--<div class="center">
+        <input type="search" class="search-input search-trips" style="width:78%;height:42px;" placeholder="Search Trips"></input>
+    </div>
+    -->
+    <div class="center">
+        My Trips</div>
+    <div class="right"  style="background-color:white;border-bottom:1px solid #EEEEEE">
+            <ons-toolbar-button>
+              <ons-icon icon="plus" fixed-width="false" style="vertical-align: -4px;" onclick="addnewtrip()"></ons-icon>
+            </ons-toolbar-button>
+    </div>
+
+</ons-toolbar>
+<div id="ios7-statusbar-fix"></div>
+
+<!-- segment control -->
+<div class="navigation-bar">
+          <div class="navigation-bar__center">
+
+            <div class="button-bar" style="width:300px; margin:8px auto 0;">
+              <div class="button-bar__item" onclick="showtrips('Invited')">
+                <input type="radio" name="navi-segment-a">
+                <div class="button-bar__button">Invited (<span id="invcount_holder">0</span>)</div>
+              </div>
+              <div class="button-bar__item" onclick="showtrips('Upcoming')">
+                <input type="radio" name="navi-segment-a"  checked>
+                <div class="button-bar__button">Upcoming (<span id="upcount_holder">0</span>)</div>
+              </div>
+              <div class="button-bar__item" onclick="showtrips('Completed')">
+                <input type="radio" name="navi-segment-a">
+                <div class="button-bar__button">Complete (<span id="comcount_holder">0</span>)</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+     <div style="padding: 10px 9px">
+        <ons-button id="create_new_trip" onclick="tripNavigator.pushPage('3_trip_2_main.html')" modifier="large" style="margin: 0 auto;">
+          Debugging Button
+        </ons-button>
+      </div>
+     
+     <div>
+         <img class="spinner" src="img/ajax-loader.gif" alt="" />
+     </div>
+      
+
+<div id="trip_div">
+<ons-list id="my_trip_list">
+
+ </ons-list>
+ </div>
+ 
+</ons-navigator>

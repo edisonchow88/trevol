@@ -1,0 +1,30 @@
+<ons-navigator var="loginnav">
+    <ons-page modifier="full_bg">
+          
+      
+      <div class="login-form" id="login_box">
+        <ons-button modifier="quiet" class="new-account" onclick="slidetoggle()" style="color:orange">Join the Travel Revolution</ons-button></br></br>
+        <input id="login_email" type="email" class="text-input--underbar" placeholder="Email" value="travelrevolution@tr.com" style="color:white;border-bottom:1px solid #DAA520;">
+        <input id="login_password" type="password" class="text-input--underbar" placeholder="Password" value="ABCD1234" style="color:white;border-bottom:1px solid #DAA520;">
+        <br><br>
+        <ons-button modifier="large" class="login-button" style="background-color:orange;color:black;" onclick="dologin()">Log In</ons-button>
+        <br><br>
+        <ons-button modifier="quiet" class="new-account" onclick="slidetoggle()" style="color:orange">Sign Up New Account</ons-button>
+        <br>
+        <ons-button modifier="quiet" class="forgot-password" onclick="loginnav.pushPage('0_login_1_forgot.html')" style="color:orange">Forgot password?</ons-button>
+      </div>
+      
+      <div class="login-form" id="signup_box" style="display:none">
+
+        <input id="signup_email" type="email" class="text-input--underbar" placeholder="Email" value="travelrevolution@tr.com" style="color:white;border-bottom:1px solid #DAA520;">
+        <input id="signup_password" type="password" class="text-input--underbar" placeholder="Password" value="ABCD1234" style="color:white;border-bottom:1px solid #DAA520;">
+        <br><br>
+        <ons-button modifier="large" class="login-button" style="background-color:orange;color:black;" onclick="signupuser()">Create New Account</ons-button>
+        <br><br>
+        <ons-button modifier="quiet" class="new-account" onclick="slidetoggle()" style="color:orange">Back to Login</ons-button>
+        <br>
+    
+        </div>
+      
+    </ons-page>
+</ons-navigator>

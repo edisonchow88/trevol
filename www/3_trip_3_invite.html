@@ -1,0 +1,62 @@
+<ons-page>
+
+<ons-toolbar fixed-style>
+    <div class="left" onclick="unhidetabs()"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Invite</div>
+    <div class="right" onclick="tripNavigator.pushPage('3_trip_3_invite_1_add.html')" style="background-color:white;border-bottom:1px solid #EEEEEE">
+            <ons-toolbar-button>
+              <ons-icon icon="plus" fixed-width="false" style="vertical-align: -4px;"></ons-icon>
+            </ons-toolbar-button>
+    </div>
+</ons-toolbar>
+
+<div class="trip_tab_containter" style="z-index:9000;">
+    <div class="trip_tab_item"><button onclick="trip_navi(1)" class="trip-menu trip-menu-1 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="comment"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(2)" class="trip-menu trip-menu-2 trip-icon button button--quiet"><ons-icon class="trip_tab_item_icon" icon="user"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(3)" class="trip-menu trip-menu-3 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="calendar"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(4)" class="trip-menu trip-menu-4 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="fa-credit-card"></ons-icon></button></div>
+    <div class="trip_tab_item"><button onclick="trip_navi(5)" class="trip-menu trip-menu-5 trip-icon button button--quiet gray-icon"><ons-icon class="trip_tab_item_icon" icon="list"></ons-icon></button></div>
+</div>  
+
+<!-- segment control -->
+<div class="navigation-bar" style="margin-top:44px">
+          <div class="navigation-bar__center">
+
+            <div class="button-bar" style="width:300px; margin:8px auto 0;" >
+              <div class="button-bar__item" onclick="show_invite('Going')">
+                <input type="radio" name="navi-segment-a" checked>
+                <div class="button-bar__button">5 Going</div>
+              </div>
+              <div class="button-bar__item" onclick="show_invite('Maybe')">
+                <input type="radio" name="navi-segment-a">
+                <div class="button-bar__button">5 Maybe</div>
+              </div>
+              <div class="button-bar__item" onclick="show_invite('Invited')">
+                <input type="radio" name="navi-segment-a">
+                <div class="button-bar__button">5 Invited</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+   
+
+<ons-list class="person-list" ng-repeat="char in ['Going', 'Maybe', 'Invited']">
+<div class="invite-filter-{{char}}">
+          <ons-list-header class="person-list-header">{{char}}</ons-list-header>
+          <ons-list-item class="person" modifier="tappable" ng-repeat="i in [1,2,3,4,5]">
+            <ons-row>
+              <ons-col width="40px">
+              <img src="img/profile-image.png" class="person-image">
+              </ons-col>
+              <ons-col class="person-name">
+                Ann Taylor
+              </ons-col>
+            </ons-row>
+          </ons-list-item>
+          </div>
+        </ons-list>
+
+
+    
+</ons-page>

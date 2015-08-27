@@ -1,0 +1,38 @@
+<ons-page>
+
+<ons-toolbar fixed-style>
+    <div class="left" onclick="unhidetabs()"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Invite to Trip</div> 
+    <div class="right"><ons-button class="button--quiet" onclick="tripNavigator.popPage()">Next</ons-button></div>
+</ons-toolbar>
+
+<div class="add_iten_item">
+<input id="iten_search" type="text" class="search-input search-trip" placeholder="Search Contacts" value=""></input>
+</div>
+
+<ons-list class="person-list" ng-repeat="char in ['A', 'B', 'C', 'D', 'E']">
+
+          <ons-list-header class="person-list-header">{{char}}</ons-list-header>
+          <ons-list-item class="person" modifier="tappable" ng-repeat="i in [1,2,3,4,5]">
+            <ons-row>
+            <ons-col width="280px">
+            <label class="checkbox checkbox--list-item">
+            <input type="checkbox">
+            <div class="checkbox__checkmark checkbox--list-item__checkmark"></div>
+            <img src="img/profile-image.png" class="person-image" style"margin:0px 20px"><span class="invite_name">My Friend's List</span>
+            </label>
+            </ons-col>
+
+            </ons-row>
+          </ons-list-item>
+         </ons-list>
+         
+<div class="add_iten_item">
+        <ons-button class="add_iten_button" onclick="search_contacts()" modifier="large" style="margin: 0 auto;">
+                Search Contacts
+        </ons-button>
+</div>          
+
+
+    
+</ons-page>
