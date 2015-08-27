@@ -219,6 +219,15 @@ border:none;
   height: 250px;
 }
 
+.card2 {
+  background-color: white;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 250px;
+}
+
 .card-toolbar ons-back-button span {
   color: white;
 }
@@ -340,13 +349,15 @@ input[type=email], input[type=password] {
 
 /* Non Onsen UI */
 
-.trip_tab_containter{
+.trip_tab_containter {
   width:100%;
   top:44px;
   position:fixed;
   background-color: white;
   display:block;
 }
+
+
 
 .trip_tab_item{
   width:18.5%;
@@ -600,6 +611,7 @@ input[type=email], input[type=password] {
 				width: 100%;
 				background: #aaa;
 				overflow: auto;
+                heigh:100%;
 			}
 
 #scroller {
@@ -621,7 +633,7 @@ input[type=email], input[type=password] {
 
 			#scroller li {
 				padding: 0 10px;
-				height: 66px;
+				height: 72px;
 				/*line-height: 40px;*/
 				border-bottom: 1px solid #ccc;
 				border-top: 1px solid #fff;
@@ -644,7 +656,7 @@ input[type=email], input[type=password] {
                     color:black;"
                     }
                     .list_img{
-                    height:60px;width:60px;
+                    height:66px;width:66px;
                     }
                     
                     .list_scr{
@@ -655,3 +667,39 @@ input[type=email], input[type=password] {
                     text-decoration:none;
                     }
                     
+
+.w_box{
+    width:66px;
+    height:66px;
+    display:inline-block;
+    vertical-align: top;
+    background-color: #CCCCCC; 
+    float:right;
+}
+
+.act_iten_container{
+  width:100%;
+  top:40px;
+  position:fixed;
+  background-color: white;
+  display:block;
+
+}
+
+#act_div{
+    margin-top: 60px;
+}
+
+.act_but{
+    width:30%;
+    display:inline-block;
+    margin:0 auto;
+}
+
+.af_icon{
+    vertical-align: center;
+    display: inline-block;
+    color: rgba(38,100,171,0.81);
+    margin:12px 7px;
+}
+        

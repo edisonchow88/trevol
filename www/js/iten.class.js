@@ -21,7 +21,7 @@ var states = [
 ];
 
 function iten_slider(){
-
+  //console.log("iten_slider");
   $('.date-slider').slick({
   infinite: false,
   slidesToShow: 3,

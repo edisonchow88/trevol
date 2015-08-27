@@ -1,17 +1,26 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="components/loader.css">
-    <script src="components/loader.js"></script>
-    <script>
-        //
-        // TODO: Write JavaScript code here
-        //
-    </script>
-</head>
-<body>
-    <!-- TODO: Please edit here -->
-</body>
-</html>
+<ons-page>
+
+<ons-toolbar fixed-style>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">Use Template</div>
+</ons-toolbar>
+
+<div class="add_iten_container" style="z-index:9000;">
+
+<div class="add_iten_item">
+<input id="iten_search" type="text" class="search-input search-trip" placeholder="Search Location" value=""></input>
+</div>
+
+</div>
+
+<div>
+         <img class="spinner" src="img/ajax-loader.gif" alt="" />
+</div>
+
+<div id="tpl_div">
+<ons-list id="tpl_list">
+
+ </ons-list>
+ </div>
+
+</ons-page>

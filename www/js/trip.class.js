@@ -52,7 +52,7 @@ function trip_navi(id){
         if(id==3){
             tripNavigator.pushPage('3_trip_4_iten.html',{ animation:'none' });
             delay_hlight(3);
-            setTimeout(function(){create_days_carousel()}, 100);;
+            setTimeout(function(){create_days_carousel();iten_slider();}, 250);
             
         }
         if(id==4){

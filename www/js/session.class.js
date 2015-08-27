@@ -17,3 +17,4 @@ var days_array=[];
 
 var login_country="";
 var contact_list=[];
+var curret_act="";

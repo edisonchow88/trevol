@@ -60,5 +60,5 @@ function iScroll(){
   disabled : false 
 });
     myApp.enableSort();
-    console.log("Enable sort");
+    //console.log("Enable sort");
 }
