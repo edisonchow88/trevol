@@ -3,6 +3,7 @@
 function dologin(){
 compiletabbar();
 find_country();
+get_gps();
 }
 
 
@@ -44,7 +45,7 @@ function loginuser(){
     var mail = $('#login_email').val();
     var pass = $('#login_password').val();
     Parse.User.logIn(mail, pass, {
-        success: function(user) {dologin();console.log("User logged in")},
+        success: function(user) {dologin();console.log("User logged in");get_gps()},
         //error: function(user, error) {alert("Error: " + error.code + " " + error.message);}
         error: function(user, error) {alert("Ooops! Looks like you entered " + error.message);}
     });   

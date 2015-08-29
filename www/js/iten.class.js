@@ -38,12 +38,14 @@ function add_trip_iten(){
     s+='<a class="list_a" href="#" onclick="populateact(\''+current_act+'\')"><div><label>';
     s+='<img class="list_img" src="'+current_act_img+'" alt=""></img>';
     s+='<span class="list_span">'+current_act_name+'</span>';
-    s+='<div class="w_box"></div></label></div></a></li>';
+    s+='<div class="w_box">'+current_act_cur+'&nbsp'+current_act_fee+'</div></label></div></a></li>';
 
     $('#itemsList li:nth-child('+dayposition[current_day]+')').after(s);
     
     var pages = tripNavigator.getPages();
     pages[pages.length - 2].destroy();
+    total_fee+=current_act_fee;
+    update_total_fee(current_act_cur,total_fee);
     tripNavigator.popPage();
 }
 
@@ -51,12 +53,12 @@ function load_iten(){
 console.log("Load iten");    
 if(current_iten_a.length==1){console.log("Skipped")}else{    
 
-
+//total_fee=0;
 var dayholder=1;
             var s="";
             dayposition[0]=0;
             dayposition[1]=1;
-            s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:#DDD;vertical-align: center;">Day'+dayholder+'</li>';
+            s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:orange;vertical-align: center;">Day'+dayholder+'</li>';
             for(var i=0; i<current_iten_a.length; i++) {
                 var act_name=current_iten_a[i][1];
                 var act_img=current_iten_a[i][2];
@@ -69,21 +71,51 @@ var dayholder=1;
                 s+='<a class="list_a" href="#" onclick="populateact(\''+current_iten_a[i][0]+'\')"><div><label>';
                 s+='<img class="list_img" src="'+act_img+'" alt=""></img>';
                 s+='<span class="list_span">'+act_name+'</span>';
-                s+='<div class="w_box">'+act_cur+'&nbsp'+act_fee+'</div></label></div></a></li>';
-
+                s+='<div class="w_box">'+act_cur+'&nbsp'+act_fee+'</div></br><div class=""></div></label></div></a></li>';
+                
                 if(!current_iten_a[i+1]){}else{
                 if(current_iten_a[i][5]<current_iten_a[i+1][5]){
                         dayholder+=1;
-                        s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:#DDD;vertical-align: center;">Day'+dayholder+'</li>';
+                        s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:orange;vertical-align: center;">Day'+dayholder+'</li>';
                         dayposition[dayholder]=i+dayholder;
                         console.log("Dayholder: "+dayholder+" Dayposition:"+dayposition[dayholder]);
                 }}
                 
           }
-        
-          
+          update_total_fee(current_act_cur,total_fee);
           $("#itemsList").html(s);
           iScroll();
           }
           }
   
+  function update_total_fee(currency,total){
+      var t="";
+      $(".total_fee").remove();
+          t='<div class="total_fee">Total: '+currency+'&nbsp'+total+'</div>';
+          
+          $("#wrapper").prepend(t);
+          
+  }
+  
+  
+  function add_flight_iten(port1,port2,port3,price){
+                s=""
+                s+='<li style="padding-top:6px">';
+                s+='<a class="list_a" href="#" onclick=""><div><label>';
+                s+='<img class="list_img" src="img/flight.jpg" alt=""></img>';
+                s+='<span class="list_span">'+port1+' to '+port2+' to '+port3+'</span>';
+                s+='<div class="w_box">'+price+'</div></br><div class=""></div></label></div></a></li>';
+                $("#itemsList").prepend(s);
+  }
+  
+  
+  
+  function add_flight_back_iten(port1,port2,port3,price){
+                s=""
+                s+='<li style="padding-top:6px">';
+                s+='<a class="list_a" href="#" onclick=""><div><label>';
+                s+='<img class="list_img" src="img/flight.jpg" alt=""></img>';
+                s+='<span class="list_span">'+port1+' to '+port2+' to '+port3+'</span>';
+                s+='<div class="w_box">'+price+'</div></br><div class=""></div></label></div></a></li>';
+                $("#itemsList").append(s);      
+  }

@@ -86,11 +86,12 @@ function queryactivity(input){
                 $('.act_d_city').html(results.get("City"));
                 $('.act_d_time').html(results.get("Time"))
                 $('.act_d_desc').html(results.get("Description"))
-                $('.act_d_fee').html('&#165'+results.get("Fee"))
+                $('.act_d_fee').html(results.get("Currency")+' '+results.get("Fee"))
                 
                 current_act_name=results.get("Activity");
                 current_act_img=results.get("IMG_ID");
-                
+                current_act_fee=results.get("Fee");
+                current_act_cur=results.get("Currency");
                 },
                 error: function(object, error) {console.log("Get Failed");} 
                 });

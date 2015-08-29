@@ -89,7 +89,8 @@ function populatetemp(input){
             var dayholder=1;
             dayposition[0]=0;
             dayposition[1]=1;
-            s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:#DDD;vertical-align: center;">Day'+dayholder+'</li>';
+            total_fee=0;
+            s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:orange;vertical-align: center;">Day'+dayholder+'</li>';
             for(var i=0; i<results.length; i++) {
                 var act_name=results[i].get("Activity");
                 var act_img=results[i].get("IMG_ID");
@@ -107,7 +108,7 @@ function populatetemp(input){
                 if(tplarrayd[i+1]){
                 if(tplarrayd[i]<tplarrayd[i+1]){
                         dayholder+=1;
-                        s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:#DDD;vertical-align: center;">Day'+dayholder+'</li>';
+                        s+='<li class="day_list" style="padding:8px 0px 8px 10px;;height:10px;background-color:orange;vertical-align: center;">Day'+dayholder+'</li>';
                         dayposition[dayholder]=i+dayholder;
                         console.log("Dayholder: "+dayholder+" Dayposition:"+dayposition[dayholder]);
                 }}
@@ -124,13 +125,15 @@ function populatetemp(input){
                 current_iten_a[i].push(act_cur);
                 //console.log(i);
                 //console.log(current_iten_a[i][0]);
-                
+                total_fee+=act_fee;
           }
-          
-          
+          update_total_fee(act_cur,total_fee);
           $("#itemsList").html(s);
           tripNavigator.popPage();
           iScroll();
+          
+         //request_flight_go();
+         //request_flight_return();
           
     	},error:function(e) {console.log("Get activity failed")}
 	});   

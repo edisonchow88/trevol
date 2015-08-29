@@ -28,6 +28,12 @@
            <ons-icon icon="mail" fixed-width="false" style="vertical-align: -4px;"></ons-icon>
           abc@mail.com
           </ons-list-item>
+          <ons-list-item>
+          <ons-icon icon="fa fa-marker" fixed-width="false" style="vertical-align: -4px;"></ons-icon>
+          <span id="select_city"></span>
+          </ons-list-item>
+          
+          
         <ons-list-item>
           <select id="select_country">
                 <option value="Afghanistan">Afghanistan</option>
@@ -245,17 +251,23 @@
           Logout
         </ons-button>
       </div>
-      
+      <!--
       <div style="padding: 10px 9px">
         <ons-button onclick="request_flight()" modifier="large">
           request flight
         </ons-button>
       </div>
-      
+      -->
       <div style="padding: 10px 9px">
         <ons-button onclick="find_weather()" modifier="large">
           Get weather
         </ons-button>
+      </div>
+      <!--
+      <div style="padding: 10px 9px">
+        <ons-button onclick="get_gps()" modifier="large">
+          Get City
+        </ons-button>-->
       </div>
 </ons-page>
 </ons-navigator>

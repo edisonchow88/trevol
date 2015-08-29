@@ -1,0 +1,64 @@
+/* This is a CSS file */
+
+/** Button Fixes*/
+button:active { opacity: 1; !important }
+
+/* Chat Fixes*/
+
+.chat-form, .chat-input{
+    width:100%;
+}
+
+/* iPad in Portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+    
+.trip_tab_containter{
+    margin-top: 20px;
+}
+
+.iten-content
+{
+    margin-top: 25px;
+}
+
+.act_iten_container{
+    margin-top:20px;
+}
+
+.iosrightfix{
+    margin-top: 20px;
+    height: 64px;
+}
+
+}
+
+/*iPhone 6 Portrait*/
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+    
+.trip_tab_containter{
+    margin-top: 15px;
+}
+
+.date-slider
+{
+    margin-top: 15px;
+}    
+    
+}
+
+/*iPhone 5 Portrait*/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px)  { 
+
+.trip_tab_containter{
+    margin-top: 15px;
+}
+
+.date-slider
+{
+    margin-top: 15px;
+}    
+
+}
+

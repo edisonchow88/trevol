@@ -249,7 +249,12 @@ function get_trip_settings(){
     current_trip_end=results.get('end');
     current_trip_country=results.get('country');
     current_trip_img=results.get('img').url();
-
+    
+    
+    //////////Add Flight/////////////
+    console.log(current_trip_title);
+    get_dest_airport(current_trip_title);
+    
     },
     error: function(object, error) {console.log("Get Failed");} 
     });

@@ -18,3 +18,22 @@ var myApp = myApp || {};
 			$(function() {
 				myApp.enableSort();
 			});
+            
+            /*
+$("#chat-form").on("submit", function(e){
+    console.log("chatted!");
+var input = $("#chat-input").val();
+s="";
+s='<div class="chat-bubble-right">'+input+'</br><span class="chat-time">11:11 &#10003&#10003</span></div>';
+$(".chat-content").append(s);
+    });*/
+    
+    $(document).keypress(function(e) {
+    if(e.which == 13) {
+        var input = $("#chat-input").val();
+s="";
+s='<div class="chat-bubble-right">'+input+'</br><span class="chat-time">11:11 &#10003&#10003</span></div>';
+$(".chat-content").append(s);
+$("#chat-input").val("");
+    }
+});

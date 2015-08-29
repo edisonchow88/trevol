@@ -59,6 +59,12 @@ function return_time_plus(start,plus){
     return result;
 }
 
+function return_day_plus(start,plus){
+    var start = new Date(start);
+    var result=start.getTime()+plus*oneDay;
+    return result;
+}
+
 function time_to(time,format){
     var theDate = new Date(time);
 

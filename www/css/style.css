@@ -211,12 +211,7 @@ border:none;
 }
 
 .card {
-  background-color: white;
-  background-image: url(../img/location4.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  height: 250px;
+  width:100%;
 }
 
 .card2 {
@@ -337,7 +332,7 @@ input[type=email], input[type=password] {
 }
 
 .forgot-password {
-  display: block;
+  /*display: block;*/
   margin: 8px auto 0 auto;
   font-size: 14px;
 }
@@ -345,6 +340,16 @@ input[type=email], input[type=password] {
 .page--full_bg__background {
     background: url("../img/giphy.gif");
     background-color: black;
+    background-size: 100% 100%;
+}
+
+
+.bg-gradient{
+      background: -webkit-radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0),rgba(0,0,0,0)); /* Safari 5.1 to 6.0 */
+      background: -o-radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0),rgba(0,0,0,0)); /* For Opera 11.6 to 12.0 */
+      background: -moz-radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0),rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+      background: radial-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0),rgba(0,0,0,0)); /* Standard syntax */
+
 }
 
 /* Non Onsen UI */
@@ -714,4 +719,11 @@ input[type=email], input[type=password] {
     background-color:#DDD;
     vertical-align: center;
     font-weight: bold;
+}
+
+.total_fee{
+    width:97%;
+    background-color: red;
+    color:white;
+    padding:10px 0px 10px 3%;
 }
